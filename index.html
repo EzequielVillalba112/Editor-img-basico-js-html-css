@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Imagen</title>
+    <!--Links BoxIcon y FontAwesome-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <!--Links css-->
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+<body>
+    <div class="contenedor desactivado">
+        <h2 class="titulo">Editor básico de imagenes</h2>
+
+        <div class="editor">
+            <div class="panel-edicion">
+                <h3>Filtros</h3>
+                <div class="btn-contenedor_filtros">
+                    <button id="brillo" class="activado">Brillo</button>
+                    <button id="saturacion" >Saturación</button>
+                    <button id="inversion" >Inversión</button>
+                    <button id="escaledegrises" >Escale de grises</button>
+                </div>
+
+                <div class="escala-editor">
+                    <div class="detalle-escala">
+                        <h3 class="nom-filtro">Brillo</h3>
+                        <h3 class="valor-rango">100%</h3>
+                    </div>
+                    
+                    <input type="range" class="rango-filtro" value="100" min="0" max="200">
+                </div>
+
+                <div class="rotacion-img">
+                    <h3>Girar y voltear</h3>
+                    <div class="contenedor-btn-rotacion-img">
+                        <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button id="vertical"><i class="bx bx-reflect-vertical"></i></button>
+                        <button id="horizontal"><i class="bx bx-reflect-horizontal"></i></button>
+                    </div>
+                </div>
+                <button class="btn-res-filtro">Restablecer filtro</button>
+            </div>
+            
+            <div class="panel-muestra">
+                <img src="./img/image-placeholder.svg" alt="preview-img" class="preview-img">
+            </div>
+
+            <div class="contendor-btn-opt-img">
+                <input type="file" class="file-input" accept="imagen/*" hidden>
+                <button class="btn-elegir-img">Elegir imagen</button>
+                <button class="btn-guardar-img">guardar imagen</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
